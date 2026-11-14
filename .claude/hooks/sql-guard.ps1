@@ -30,7 +30,7 @@ $ErrorActionPreference = 'Stop'
 $rules = @(
     [pscustomobject]@{ Decision = 'deny'; Name = 'Read .env.dab'
         Pattern = '(?i)\.env\.dab\b'
-        Reason  = '.env.dab holds SQL credentials. Load it inside a script (DAB\DabSettings.ps1); never display or read it directly.' },
+        Reason  = '.env.dab holds SQL credentials. Load it inside a script (DataAPIBuilder\DabSettings.ps1); never display or read it directly.' },
     [pscustomobject]@{ Decision = 'deny'; Name = 'DROP'
         Pattern = '(?i)\bDROP\s+(DATABASE|TABLE|LOGIN|USER|SCHEMA|AVAILABILITY\s+GROUP|EVENT\s+SESSION)\b'
         Reason  = 'Dropping databases, tables, logins, users, schemas, AGs or XE sessions is not allowed from an AI session. A human runs it through change control.' },

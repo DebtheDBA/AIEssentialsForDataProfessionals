@@ -28,7 +28,7 @@ $cases = @(
     @{ Expect = 'allow'; Tool = 'PowerShell'; Input = @{ command = "Invoke-DbaQuery -SqlInstance TestSQL2025_1 -Database AGTest1 -Query 'UPDATE dbo.Customer SET FirstName = ''Bash'' WHERE CustomerID = 1'" } }
     @{ Expect = 'allow'; Tool = 'PowerShell'; Input = @{ command = 'Get-DbaAgReplica -SqlInstance TestSQL2025_1 -AvailabilityGroup AG_2025_Test' } }
     @{ Expect = 'allow'; Tool = 'Bash';       Input = @{ command = 'docker compose -f docker-compose.2025.yml down' } }
-    @{ Expect = 'allow'; Tool = 'Read';       Input = @{ file_path = 'C:\GitRepo\AIEssentialsForDataProfessionals\DAB\README.md' } }
+    @{ Expect = 'allow'; Tool = 'Read';       Input = @{ file_path = 'C:\GitRepo\AIEssentialsForDataProfessionals\DataAPIBuilder\README.md' } }
     @{ Expect = 'allow'; Tool = 'mcp__genius-songlyrics__read_records'; Input = @{ entity = 'SongLyric'; select = 'ID,Title,Artist'; first = 1 } }
 
     @{ Expect = 'deny';  Tool = 'PowerShell'; Input = @{ command = 'Get-Content .\.env.dab' } }
